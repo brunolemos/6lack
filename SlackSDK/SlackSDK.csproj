@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62E1CAD6-6140-4F6C-8E0F-8DBD211B3583}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Slack</RootNamespace>
+    <AssemblyName>SlackSDK</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
+    <TargetPlatform Include="Windows, Version=8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\Methods\RTMMethods.cs" />
+    <Compile Include="API\Methods\ChatMethods.cs" />
+    <Compile Include="API\Methods\ChannelMethods.cs" />
+    <Compile Include="API\Methods\AuthMethods.cs" />
+    <Compile Include="API\Responses\RealtimeStartResponse.cs" />
+    <Compile Include="API\Responses\ChannelHistoryResponse.cs" />
+    <Compile Include="API\Responses\EmojiListResponse.cs" />
+    <Compile Include="API\Responses\ChannelListResponse.cs" />
+    <Compile Include="API\Responses\UpdateMessageResponse.cs" />
+    <Compile Include="API\Responses\PostMessageResponse.cs" />
+    <Compile Include="API\Responses\DeleteMessageResponse.cs" />
+    <Compile Include="API\Responses\ChannelResponse.cs" />
+    <Compile Include="API\Responses\JoinChannelResponse.cs" />
+    <Compile Include="API\Responses\TopicChannelResponse.cs" />
+    <Compile Include="API\Responses\PurposeChannelResponse.cs" />
+    <Compile Include="API\Responses\LeaveChannelResponse.cs" />
+    <Compile Include="API\Responses\StandardResponse.cs" />
+    <Compile Include="API\Responses\AuthAccessResponse.cs" />
+    <Compile Include="Common\Notifiable.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Exceptions\BadRedirectUriException.cs" />
+    <Compile Include="Exceptions\InvalidCodeException.cs" />
+    <Compile Include="Exceptions\BadClientSecretException.cs" />
+    <Compile Include="Exceptions\InvalidClientIDException.cs" />
+    <Compile Include="Exceptions\MigrationInProgressException.cs" />
+    <Compile Include="Exceptions\CantDeleteMessageException.cs" />
+    <Compile Include="Exceptions\EditWindowClosedException.cs" />
+    <Compile Include="Exceptions\CantUpdateMessageException.cs" />
+    <Compile Include="Exceptions\RateLimitedException.cs" />
+    <Compile Include="Exceptions\NoTextException.cs" />
+    <Compile Include="Exceptions\MessageNotFoundException.cs" />
+    <Compile Include="Exceptions\NotArchivedException.cs" />
+    <Compile Include="Exceptions\MessageTooLongException.cs" />
+    <Compile Include="Exceptions\TooLongException.cs" />
+    <Compile Include="Exceptions\AccountInactiveException.cs" />
+    <Compile Include="Exceptions\AlreadyArchivedException.cs" />
+    <Compile Include="Exceptions\AlreadyInChannelException.cs" />
+    <Compile Include="Exceptions\CantArchiveGeneralException.cs" />
+    <Compile Include="Exceptions\CantLeaveGeneralException.cs" />
+    <Compile Include="Exceptions\CantKickFromLastChannelException.cs" />
+    <Compile Include="Exceptions\CantKickFromGeneralException.cs" />
+    <Compile Include="Exceptions\CantKickSelfException.cs" />
+    <Compile Include="Exceptions\CantInviteException.cs" />
+    <Compile Include="Exceptions\CantInviteSelfException.cs" />
+    <Compile Include="Exceptions\IsArchivedException.cs" />
+    <Compile Include="Exceptions\InvalidNameException.cs" />
+    <Compile Include="Exceptions\NotInChannelException.cs" />
+    <Compile Include="Exceptions\UserIsUltraRestrictedException.cs" />
+    <Compile Include="Exceptions\UserNotFoundException.cs" />
+    <Compile Include="Exceptions\ChannelNotFoundException.cs" />
+    <Compile Include="Exceptions\InvalidAuthException.cs" />
+    <Compile Include="Exceptions\InvalidTSOldestException.cs" />
+    <Compile Include="Exceptions\InvalidTSLatestException.cs" />
+    <Compile Include="Exceptions\LastRestrictedAccountChannel.cs" />
+    <Compile Include="Exceptions\NameTakenException.cs" />
+    <Compile Include="Exceptions\NoChannelException.cs" />
+    <Compile Include="Exceptions\NotAuthedException.cs" />
+    <Compile Include="Exceptions\RestrictedActionException.cs" />
+    <Compile Include="Exceptions\SlackException.cs" />
+    <Compile Include="Exceptions\UserIsBotException.cs" />
+    <Compile Include="Exceptions\UserIsRestrictedException.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\Channel.cs" />
+    <Compile Include="Models\Attachment.cs" />
+    <Compile Include="Models\Emoji.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="API\SlackAPI.cs" />
+    <Content Include="Utils\Constants.cs.txt" />
+    <Compile Include="Utils\Constants.cs" />
+    <Compile Include="Utils\Extensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1-beta1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

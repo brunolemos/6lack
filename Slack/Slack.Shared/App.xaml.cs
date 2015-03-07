@@ -81,7 +81,7 @@ namespace Slack
             }
 
             //window chrome
-            ChangeWindowChromeAppearence(false);
+            ChangeWindowChromeAppearence(true);
 
             // Ensure the current window is active
             Window.Current.Activate();
@@ -104,7 +104,7 @@ namespace Slack
             deferral.Complete();
         }
 
-        private void ChangeWindowChromeAppearence(bool isVisible)
+        private void ChangeWindowChromeAppearence(bool isVisible = true)
         {
             try
             {
@@ -116,11 +116,11 @@ namespace Slack
                 dynamic titleBarInst = titleBar.GetMethod.Invoke(v, null);
                 titleBarInst.ExtendViewIntoTitleBar = !isVisible;
 
-                titleBarInst.BackgroundColor = isVisible ? Color.FromArgb(0xff, 0xee, 0xee, 0xee) : Colors.Transparent;
-                titleBarInst.ForegroundColor = Colors.Black;
+                //titleBarInst.BackgroundColor = isVisible ? Color.FromArgb(0xff, 0x41, 0x2f, 0x3c) : Colors.Transparent;
+                //titleBarInst.ForegroundColor = Colors.White;
 
-                titleBarInst.ButtonBackgroundColor = isVisible ? Color.FromArgb(0xff, 0xee, 0xee, 0xee) : Colors.Transparent;
-                titleBarInst.ButtonForegroundColor = Colors.Black;
+                //titleBarInst.ButtonBackgroundColor = isVisible ? Color.FromArgb(0xff, 0x41, 0x2f, 0x3c) : Colors.Transparent;
+                //titleBarInst.ButtonForegroundColor = Colors.White;
 
                 titleBarInst.ButtonHoverBackgroundColor = Color.FromArgb(0xff, 0x51, 0x35, 0x4b);
                 titleBarInst.ButtonHoverForegroundColor = Colors.White;

@@ -5,6 +5,7 @@
 *.suo
 *.user
 *.sln.docstates
+**/Constants.cs
 
 # Build results
 [Dd]ebug/

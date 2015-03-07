@@ -1,0 +1,9 @@
+﻿namespace SlackSDK.Utils
+{
+    public static class Constants
+    {
+        public const string REDIRECT_URL = "-------your-configured-redirect-url-------";
+        public const string CLIENT_ID = "-------your-client-id-------";
+        public const string CLIENT_SECRET = "-------test-only---not-safe--------";
+    }
+}
