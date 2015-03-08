@@ -28,7 +28,7 @@ namespace SlackSDK.Models
         private bool isGeneral;
 
         [DataMember(Name = "created")]
-        public float CreatedAt { get; protected set; }
+        public string CreatedAt { get; protected set; }
 
         [DataMember(Name = "creator")]
         public string CreatedBy { get; protected set; }
@@ -49,8 +49,8 @@ namespace SlackSDK.Models
         private bool isMember;
 
         [DataMember(Name = "last_read")]
-        public float LastReadAt { get { return lastReadAt; } protected set { if (lastReadAt != value) { lastReadAt = value; NotifyPropertyChanged("LastReadAt"); } } }
-        private float lastReadAt;
+        public string LastReadAt { get { return lastReadAt; } protected set { if (lastReadAt != value) { lastReadAt = value; NotifyPropertyChanged("LastReadAt"); } } }
+        private string lastReadAt;
 
         [DataMember(Name = "unread_count")]
         public uint UnreadCount { get { return unreadCount; } protected set { if (unreadCount != value) { unreadCount = value; NotifyPropertyChanged("UnreadCount"); } } }
@@ -83,7 +83,7 @@ namespace SlackSDK.Models
         private string createdBy;
 
         [DataMember(Name = "last_set")]
-        public float UpdatedAt { get { return updatedAt; } protected set { if (updatedAt != value) { updatedAt = value; NotifyPropertyChanged("UpdatedAt"); } } }
-        private float updatedAt;
+        public string UpdatedAt { get { return updatedAt; } protected set { if (updatedAt != value) { updatedAt = value; NotifyPropertyChanged("UpdatedAt"); } } }
+        private string updatedAt;
     }
 }

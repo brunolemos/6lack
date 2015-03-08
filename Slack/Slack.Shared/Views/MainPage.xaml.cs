@@ -1,6 +1,7 @@
 ﻿using Slack.Common;
 using Slack.ViewModels;
-using SlackSDK.API;
+using SlackSDK;
+using SlackSDK.API.RTM.Events;
 using System;
 using System.Diagnostics;
 using Windows.Networking.Sockets;
@@ -37,30 +38,15 @@ namespace Slack.Views
             if (String.IsNullOrEmpty(token)) return;
 
             Debug.WriteLine("Token: " + token);
-            var slackAPI = new SlackAPI(token);
+            SlackAPI.Config(token);
 
             //var channels = await ChannelAPI.Instance.GetChannelList();
             //viewModel.Channels = channels;
 
-            var response = await slackAPI.StartRTM();
+            var response = await SlackAPI.RealtimeAPI.Connect();
             if (response == null) return;
 
             viewModel.Channels = response.Channels;
-
-            Uri websocketUri = new Uri(response.URL);
-
-            var socket = new MessageWebSocket();
-            socket.MessageReceived += OnMessageReceived;
-
-            await socket.ConnectAsync(websocketUri);
-        }
-
-        private void OnMessageReceived(MessageWebSocket sender, MessageWebSocketMessageReceivedEventArgs args)
-        {
-            DataReader dataReader = args.GetDataReader();
-            string content = dataReader.ReadString(dataReader.UnconsumedBufferLength);
-
-            Debug.WriteLine("OnMessageReceived: {0}", content);
         }
 
         private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)

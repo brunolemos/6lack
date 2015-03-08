@@ -27,8 +27,8 @@ namespace SlackSDK.Models
         private string domain;
 
         [DataMember(Name = "msg_edit_window_mins")]
-        public float MessageEditWindowMins { get { return messageEditWindowMins; } protected set { if (messageEditWindowMins != value) { messageEditWindowMins = value; NotifyPropertyChanged("MessageEditWindowMins"); } } }
-        private float messageEditWindowMins;
+        public string MessageEditWindowMins { get { return messageEditWindowMins; } protected set { if (messageEditWindowMins != value) { messageEditWindowMins = value; NotifyPropertyChanged("MessageEditWindowMins"); } } }
+        private string messageEditWindowMins;
 
         [DataMember(Name = "over_storage_limit")]
         public bool OverStorageLimit { get { return overStorageLimit; } protected set { if (overStorageLimit != value) { overStorageLimit = value; NotifyPropertyChanged("OverStorageLimit"); } } }

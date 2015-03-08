@@ -8,7 +8,7 @@
     <ProjectGuid>{62E1CAD6-6140-4F6C-8E0F-8DBD211B3583}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Slack</RootNamespace>
+    <RootNamespace>SlackSDK</RootNamespace>
     <AssemblyName>SlackSDK</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
@@ -38,24 +38,45 @@
     <TargetPlatform Include="Windows, Version=8.1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\Methods\RTMMethods.cs" />
-    <Compile Include="API\Methods\ChatMethods.cs" />
-    <Compile Include="API\Methods\ChannelMethods.cs" />
-    <Compile Include="API\Methods\AuthMethods.cs" />
-    <Compile Include="API\Responses\RealtimeStartResponse.cs" />
-    <Compile Include="API\Responses\ChannelHistoryResponse.cs" />
-    <Compile Include="API\Responses\EmojiListResponse.cs" />
-    <Compile Include="API\Responses\ChannelListResponse.cs" />
-    <Compile Include="API\Responses\UpdateMessageResponse.cs" />
-    <Compile Include="API\Responses\PostMessageResponse.cs" />
-    <Compile Include="API\Responses\DeleteMessageResponse.cs" />
-    <Compile Include="API\Responses\ChannelResponse.cs" />
-    <Compile Include="API\Responses\JoinChannelResponse.cs" />
-    <Compile Include="API\Responses\TopicChannelResponse.cs" />
-    <Compile Include="API\Responses\PurposeChannelResponse.cs" />
-    <Compile Include="API\Responses\LeaveChannelResponse.cs" />
-    <Compile Include="API\Responses\StandardResponse.cs" />
-    <Compile Include="API\Responses\AuthAccessResponse.cs" />
+    <Compile Include="API\BaseAPI.cs" />
+    <Compile Include="API\RTM\SlackRealtimeAPI.cs" />
+    <Compile Include="API\Web\Methods\RTMMethods.cs" />
+    <Compile Include="API\Web\Methods\ChatMethods.cs" />
+    <Compile Include="API\Web\Methods\ChannelMethods.cs" />
+    <Compile Include="API\Web\Methods\AuthMethods.cs" />
+    <Compile Include="API\Web\SlackWebAPI.cs" />
+    <Compile Include="Events\SocketMessageEventArgs.cs" />
+    <Compile Include="Responses\RealtimeStartResponse.cs" />
+    <Compile Include="Responses\ChannelHistoryResponse.cs" />
+    <Compile Include="Responses\EmojiListResponse.cs" />
+    <Compile Include="Responses\ChannelListResponse.cs" />
+    <Compile Include="Responses\UpdateMessageResponse.cs" />
+    <Compile Include="Responses\PostMessageResponse.cs" />
+    <Compile Include="Responses\DeleteMessageResponse.cs" />
+    <Compile Include="Responses\ChannelResponse.cs" />
+    <Compile Include="Responses\JoinChannelResponse.cs" />
+    <Compile Include="Responses\TopicChannelResponse.cs" />
+    <Compile Include="Responses\PurposeChannelResponse.cs" />
+    <Compile Include="Responses\LeaveChannelResponse.cs" />
+    <Compile Include="Responses\StandardResponse.cs" />
+    <Compile Include="Responses\AuthAccessResponse.cs" />
+    <Compile Include="API\RTM\Events\BaseSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\ManualPresenceChangedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\TeamJoinedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\UserChangedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\PrefChangedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\PresenceChangedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\ChannelHistoryChangedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\ChannelUnarchivedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\ChannelArchivedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\ChannelRenamedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\ChannelDeletedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\ChannelLeftSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\ChannelJoinedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\ChannelCreatedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\HelloSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\ChannelMarkedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\MessageSocketEvent.cs" />
     <Compile Include="Common\Notifiable.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Exceptions\BadRedirectUriException.cs" />
@@ -108,7 +129,7 @@
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="API\SlackAPI.cs" />
+    <Compile Include="SlackAPI.cs" />
     <Content Include="Utils\Constants.cs.txt" />
     <Compile Include="Utils\Constants.cs" />
     <Compile Include="Utils\Extensions.cs" />
@@ -121,6 +142,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

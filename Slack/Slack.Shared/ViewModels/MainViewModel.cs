@@ -1,5 +1,4 @@
 using Slack.Common;
-using SlackSDK;
 using SlackSDK.Models;
 
 namespace Slack.ViewModels
