@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using SlackSDK.Models;
+using System.Runtime.Serialization;
 
 namespace SlackSDK.API.RTM.Events
 {
@@ -19,21 +20,13 @@ namespace SlackSDK.API.RTM.Events
         [DataMember(Name = "subtype")]
         public string SubType { get; private set; }
 
+        [DataMember(Name = "hidden")]
+        public bool IsHidden { get; private set; }
+
         [DataMember(Name = "channel")]
-        public string ChannelID { get; protected set; }
-
-        [DataMember(Name = "user")]
-        public string UserID { get; protected set; }
-
-        [DataMember(Name = "text")]
-        public string Text { get; protected set; }
+        public string ChannelOrGroupID { get; protected set; }
 
         [DataMember(Name = "ts")]
         public string Timestamp { get; protected set; }
-
-        //"edited": {
-        //    "user": "U2147483697",
-        //    "ts": "1355517536.000001"
-        //}
     }
 }

@@ -39,6 +39,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\BaseAPI.cs" />
+    <Compile Include="API\RTM\Events\Messages\BaseChannelOrGroupSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\ChannelOrGroupUnarchiveSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\ChannelOrGroupArchiveSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\ChannelOrGroupNameSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\ChannelOrGroupPurposeSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\ChannelOrGroupTopicSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\ChannelOrGroupLeaveSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\ChannelOrGroupJoinSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\MessageDeletedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\MessageChangedSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\BotMessageSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\MeMessageSocketEvent.cs" />
     <Compile Include="API\RTM\SlackRealtimeAPI.cs" />
     <Compile Include="API\Web\Methods\RTMMethods.cs" />
     <Compile Include="API\Web\Methods\ChatMethods.cs" />

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SlackSDK.API.RTM.Events;
+using SlackSDK.API.RTM.Events.Messages;
 using SlackSDK.Responses;
 using System;
 using System.Diagnostics;
@@ -30,6 +31,19 @@ namespace SlackSDK.API.RTM
         public event SocketMessageEventHandler<PresenceChangedSocketEvent> PresenceChanged;
         public event SocketMessageEventHandler<TeamJoinedSocketEvent> TeamJoined;
         public event SocketMessageEventHandler<UserChangedSocketEvent> UserChanged;
+
+        //messages
+        public event SocketMessageEventHandler<BotMessageSocketEvent> BotMessageReceived;
+        public event SocketMessageEventHandler<ChannelOrGroupArchiveSocketEvent> ChannelOrGroupArchiveMessageReceived;
+        public event SocketMessageEventHandler<ChannelOrGroupJoinSocketEvent> ChannelOrGroupJoinMessageReceived;
+        public event SocketMessageEventHandler<ChannelOrGroupLeaveSocketEvent> ChannelOrGroupLeaveMessageReceived;
+        public event SocketMessageEventHandler<ChannelOrGroupNameSocketEvent> ChannelOrGroupRenameChangeMessageReceived;
+        public event SocketMessageEventHandler<ChannelOrGroupPurposeSocketEvent> ChannelOrGroupPurposeMessageReceived;
+        public event SocketMessageEventHandler<ChannelOrGroupTopicSocketEvent> ChannelOrGroupTopicMessageReceived;
+        public event SocketMessageEventHandler<ChannelOrGroupUnarchiveSocketEvent> ChannelOrGroupUnarchiveMessageReceived;
+        public event SocketMessageEventHandler<MeMessageSocketEvent> MeMessageReceived;
+        public event SocketMessageEventHandler<MessageChangedSocketEvent> ChangeMessageReceived;
+        public event SocketMessageEventHandler<MessageDeletedSocketEvent> DeleteMessageReceived;
 
         internal SlackRealtimeAPI() { }
 
@@ -102,13 +116,34 @@ namespace SlackSDK.API.RTM
                 case UserChangedSocketEvent.TYPE:           DispatchSocketEventHandler(UserChanged, json); break;
 
                 case MessageSocketEvent.TYPE:
-                    //string subtype = JObject.Parse(json)?["subtype"]?.ToString() ?? "null";
-                    //if (String.IsNullOrEmpty(subtype)) return;
+                    string subtype = JObject.Parse(json)?["subtype"]?.ToString() ?? "null";
+                    if (String.IsNullOrEmpty(subtype)) return;
 
-                    //switch (subtype)
-                    //{
-                    //    case HelloSocketEvent.TYPE: DispatchSocketEventHandler(HelloSocketEventReceived, json); break;
-                    //}
+                    switch (subtype)
+                    {
+                        case BotMessageSocketEvent.SUBTYPE: DispatchSocketEventHandler(BotMessageReceived, json); break;
+                        case MeMessageSocketEvent.SUBTYPE: DispatchSocketEventHandler(MeMessageReceived, json); break;
+                        case MessageChangedSocketEvent.SUBTYPE: DispatchSocketEventHandler(ChangeMessageReceived, json); break;
+                        case MessageDeletedSocketEvent.SUBTYPE: DispatchSocketEventHandler(DeleteMessageReceived, json); break;
+
+                        //channels
+                        case ChannelOrGroupArchiveSocketEvent.SUBTYPE: DispatchSocketEventHandler(ChannelOrGroupArchiveMessageReceived, json); break;
+                        case ChannelOrGroupJoinSocketEvent.SUBTYPE: DispatchSocketEventHandler(ChannelOrGroupJoinMessageReceived, json); break;
+                        case ChannelOrGroupLeaveSocketEvent.SUBTYPE: DispatchSocketEventHandler(ChannelOrGroupLeaveMessageReceived, json); break;
+                        case ChannelOrGroupNameSocketEvent.SUBTYPE: DispatchSocketEventHandler(ChannelOrGroupRenameChangeMessageReceived, json); break;
+                        case ChannelOrGroupPurposeSocketEvent.SUBTYPE: DispatchSocketEventHandler(ChannelOrGroupPurposeMessageReceived, json); break;
+                        case ChannelOrGroupTopicSocketEvent.SUBTYPE: DispatchSocketEventHandler(ChannelOrGroupTopicMessageReceived, json); break;
+                        case ChannelOrGroupUnarchiveSocketEvent.SUBTYPE: DispatchSocketEventHandler(ChannelOrGroupUnarchiveMessageReceived, json); break;
+
+                        //groups
+                        case ChannelOrGroupArchiveSocketEvent.SUBTYPE2: DispatchSocketEventHandler(ChannelOrGroupArchiveMessageReceived, json); break;
+                        case ChannelOrGroupJoinSocketEvent.SUBTYPE2: DispatchSocketEventHandler(ChannelOrGroupJoinMessageReceived, json); break;
+                        case ChannelOrGroupLeaveSocketEvent.SUBTYPE2: DispatchSocketEventHandler(ChannelOrGroupLeaveMessageReceived, json); break;
+                        case ChannelOrGroupNameSocketEvent.SUBTYPE2: DispatchSocketEventHandler(ChannelOrGroupRenameChangeMessageReceived, json); break;
+                        case ChannelOrGroupPurposeSocketEvent.SUBTYPE2: DispatchSocketEventHandler(ChannelOrGroupPurposeMessageReceived, json); break;
+                        case ChannelOrGroupTopicSocketEvent.SUBTYPE2: DispatchSocketEventHandler(ChannelOrGroupTopicMessageReceived, json); break;
+                        case ChannelOrGroupUnarchiveSocketEvent.SUBTYPE2: DispatchSocketEventHandler(ChannelOrGroupUnarchiveMessageReceived, json); break;
+                    }
                     break;
             }
         }

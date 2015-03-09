@@ -17,6 +17,7 @@ namespace SlackSDK.API.RTM.Events
         public RenamedChannel Channel { get; protected set; }
     }
 
+    [DataContract]
     public class RenamedChannel : Notifiable
     {
         [DataMember(Name = "id")]

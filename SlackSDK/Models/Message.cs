@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using SlackSDK.Common;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 
 namespace SlackSDK.Models
@@ -8,11 +9,29 @@ namespace SlackSDK.Models
     [DataContract]
     public class Message : BaseModel
     {
-        //"type": "message",
-        //    "ts": "1358546515.000007",
-        //    "user": "U2147483896",
-        //    "text": "World",
-        //    "is_starred": true,
-        //    "wibblr": true
+        //[DataMember(Name = "channel")]
+        //public string ChannelID { get; protected set; }
+
+        [DataMember(Name = "user")]
+        public string UserID { get; protected set; }
+
+        [DataMember(Name = "text")]
+        public string Text { get; protected set; }
+
+        [DataMember(Name = "ts")]
+        public string Timestamp { get; protected set; }
+
+        //"attachments": []
+        //"is_starred": true,
+        //"wibblr": true
+    }
+
+    public class EditedMessage : Notifiable
+    {
+        [DataMember(Name = "user")]
+        public string UserID { get; protected set; }
+
+        [DataMember(Name = "ts")]
+        public string Timestamp { get; protected set; }
     }
 }

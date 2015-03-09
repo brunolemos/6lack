@@ -6,6 +6,7 @@ using System;
 using System.Diagnostics;
 using Windows.Networking.Sockets;
 using Windows.Storage.Streams;
+using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
@@ -45,7 +46,7 @@ namespace Slack.Views
 
             var response = await SlackAPI.RealtimeAPI.Connect();
             if (response == null) return;
-
+            
             viewModel.Channels = response.Channels;
         }
 
