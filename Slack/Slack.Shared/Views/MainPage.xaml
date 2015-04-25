@@ -9,12 +9,39 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    
     <Page.Resources>
         <DataTemplate x:Key="ChannelDataTemplate">
             <Grid>
                 <TextBlock>
                     <Run Text="#"/><Run Text="{Binding Name}" />
                 </TextBlock>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="MessageDataTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0" Source="{Binding User.Profile.Image48x48}" Width="36" Height="36"/>
+                <TextBlock Grid.Column="1" Text="{Binding Text}" />
+            </Grid>
+        </DataTemplate>
+        
+        <DataTemplate x:Key="MessageTemplate">
+            <Grid Background="#FFD10D0D" Margin="0,0,0,20" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border VerticalAlignment="Top" CornerRadius="6" Width="60" Height="60" Background="#19000000"/>
+                <StackPanel Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Top">
+                    <TextBlock Text="{Binding User.Profile.RealName}" Style="{StaticResource TitleTextBlockStyle}" FontSize="18.667" Padding="0,3,0,6"/>
+                    <TextBlock Text="{Binding Text}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap" FontSize="18.667"/>
+                </StackPanel>
             </Grid>
         </DataTemplate>
     </Page.Resources>
@@ -27,13 +54,38 @@
                 <ColumnDefinition Width="16*" MinWidth="300"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0" Background="#362432"/>
+            <Grid Grid.Column="0" Background="#362432" RequestedTheme="Dark"/>
 
-            <Grid Grid.Column="1" Background="#51354b">
-                <ListView ItemsSource="{Binding}" DataContext="{Binding Channels}" ItemTemplate="{StaticResource ChannelDataTemplate}"/>
+            <Grid Grid.Column="1" Background="#51354b" RequestedTheme="Dark">
+                <ListView ItemsSource="{Binding}" DataContext="{Binding SelectedTeam.Channels}" ItemTemplate="{StaticResource ChannelDataTemplate}"/>
             </Grid>
 
-            <Grid Grid.Column="2" Background="White"/>
+            <Grid Grid.Column="2" Background="White" RequestedTheme="Light">
+                <ListView ItemsSource="{Binding}" DataContext="{Binding Messages}" ItemTemplate="{StaticResource MessageTemplate}" SelectionMode="None">
+                    <!--<ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapGrid Orientation="Vertical" HorizontalChildrenAlignment="Stretch"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="Margin" Value="0"/>
+                            <Setter Property="MinHeight" Value="0"/>
+                            <Setter Property="Height" Value="Auto"/>
+                            
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListViewItem">
+                                        <ListViewItemPresenter ContentMargin="0" Padding="0"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>-->
+                </ListView>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

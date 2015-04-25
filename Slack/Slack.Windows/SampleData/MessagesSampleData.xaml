@@ -1,0 +1,47 @@
+﻿<Models:Messages xmlns:Models="using:SlackSDK.Models">
+    <Models:Message Text="Augue convallis duis">
+        <Models:Message.User>
+            <Models:User Name="Fusce aenean" Presence="ACTIVE">
+                <Models:User.Profile>
+                    <Models:UserProfile RealName="Bruno Lemos" Image32x32="http://graph.facebook.com/brunolemos/picture?width=100&amp;height=100"/>
+                </Models:User.Profile>
+            </Models:User>
+        </Models:Message.User>
+    </Models:Message>
+    <Models:Message Text="Augue convallis duis">
+        <Models:Message.User>
+            <Models:User Name="Fusce aenean" Presence="ACTIVE">
+                <Models:User.Profile>
+                    <Models:UserProfile RealName="Bruno Lemos" Image32x32="http://graph.facebook.com/brunolemos/picture?width=100&amp;height=100"/>
+                </Models:User.Profile>
+            </Models:User>
+        </Models:Message.User>
+    </Models:Message>
+    <Models:Message Text="Augue convallis duis">
+        <Models:Message.User>
+            <Models:User Name="Fusce aenean" Presence="ACTIVE">
+                <Models:User.Profile>
+                    <Models:UserProfile RealName="Bruno Lemos" Image32x32="http://graph.facebook.com/brunolemos/picture?width=100&amp;height=100"/>
+                </Models:User.Profile>
+            </Models:User>
+        </Models:Message.User>
+    </Models:Message>
+    <Models:Message Text="Augue convallis duis">
+        <Models:Message.User>
+            <Models:User Name="Fusce aenean" Presence="ACTIVE">
+                <Models:User.Profile>
+                    <Models:UserProfile RealName="Bruno Lemos" Image32x32="http://graph.facebook.com/brunolemos/picture?width=100&amp;height=100"/>
+                </Models:User.Profile>
+            </Models:User>
+        </Models:Message.User>
+    </Models:Message>
+    <Models:Message Text="Augue convallis duis">
+        <Models:Message.User>
+            <Models:User Name="Fusce aenean" Presence="ACTIVE">
+                <Models:User.Profile>
+                    <Models:UserProfile RealName="Bruno Lemos" Image32x32="http://graph.facebook.com/brunolemos/picture?width=100&amp;height=100"/>
+                </Models:User.Profile>
+            </Models:User>
+        </Models:Message.User>
+    </Models:Message>
+</Models:Messages>

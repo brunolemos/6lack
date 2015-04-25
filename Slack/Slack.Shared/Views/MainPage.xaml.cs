@@ -1,9 +1,13 @@
 ﻿using Slack.Common;
+using Slack.Utils;
 using Slack.ViewModels;
 using SlackSDK;
 using SlackSDK.API.RTM.Events;
+using SlackSDK.Models;
 using System;
 using System.Diagnostics;
+using System.Linq;
+using Windows.ApplicationModel.Core;
 using Windows.Networking.Sockets;
 using Windows.Storage.Streams;
 using Windows.UI.Popups;
@@ -45,9 +49,29 @@ namespace Slack.Views
             //viewModel.Channels = channels;
 
             var response = await SlackAPI.RealtimeAPI.Connect();
-            if (response == null) return;
-            
-            viewModel.Channels = response.Channels;
+            if (response?.OK != true) return;
+
+            SlackClient.Initialize(response);
+
+            viewModel.SelectedTeam = SlackClient.Teams[0];
+            viewModel.SelectedChannel = SlackClient.Teams[0].Channels[0];
+
+            var messages = (await SlackAPI.WebAPI.GetChannelHistory(viewModel.SelectedTeam?.Channels[0]?.ID))?.Messages?.OrderBy(x => x.Timestamp);
+            viewModel.Messages.Clear();
+            foreach (var message in messages)
+                viewModel.Messages.Add(message);
+
+            SlackAPI.RealtimeAPI.MessageReceived += RealtimeAPI_MessageReceived;
+        }
+
+        private async void RealtimeAPI_MessageReceived(SlackSDK.API.RTM.Events.Messages.GenericMessageSocketEvent socketEvent)
+        {
+            var dispatcher = CoreApplication.MainView.CoreWindow.Dispatcher;
+            await dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+            {
+                Debug.WriteLine("------> Mensagem recebida: {0}", socketEvent.Text);
+                viewModel.Messages.Add(new SlackSDK.Models.Message(socketEvent));
+            });
         }
 
         private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)

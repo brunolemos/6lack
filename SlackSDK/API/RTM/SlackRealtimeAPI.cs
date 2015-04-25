@@ -33,6 +33,7 @@ namespace SlackSDK.API.RTM
         public event SocketMessageEventHandler<UserChangedSocketEvent> UserChanged;
 
         //messages
+        public event SocketMessageEventHandler<GenericMessageSocketEvent> MessageReceived;
         public event SocketMessageEventHandler<BotMessageSocketEvent> BotMessageReceived;
         public event SocketMessageEventHandler<ChannelOrGroupArchiveSocketEvent> ChannelOrGroupArchiveMessageReceived;
         public event SocketMessageEventHandler<ChannelOrGroupJoinSocketEvent> ChannelOrGroupJoinMessageReceived;
@@ -84,7 +85,8 @@ namespace SlackSDK.API.RTM
 
         private void OnMessageReceived(MessageWebSocket sender, MessageWebSocketMessageReceivedEventArgs args)
         {
-            DataReader dataReader = args.GetDataReader();
+            DataReader dataReader = args?.GetDataReader();
+            if (dataReader == null) return;
 
             string content = dataReader.ReadString(dataReader.UnconsumedBufferLength);
             Debug.WriteLine("OnMessageReceived: {0}", content);
@@ -143,6 +145,9 @@ namespace SlackSDK.API.RTM
                         case ChannelOrGroupPurposeSocketEvent.SUBTYPE2: DispatchSocketEventHandler(ChannelOrGroupPurposeMessageReceived, json); break;
                         case ChannelOrGroupTopicSocketEvent.SUBTYPE2: DispatchSocketEventHandler(ChannelOrGroupTopicMessageReceived, json); break;
                         case ChannelOrGroupUnarchiveSocketEvent.SUBTYPE2: DispatchSocketEventHandler(ChannelOrGroupUnarchiveMessageReceived, json); break;
+
+                        //generic message
+                        default: DispatchSocketEventHandler(MessageReceived, json); break;
                     }
                     break;
             }

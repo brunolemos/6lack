@@ -13,14 +13,8 @@ namespace SlackSDK.API.RTM.Events.Messages
     /// If they find one the existing message should be replaced with the new one.
     /// </summary>
     [DataContract]
-    public class MessageChangedSocketEvent : MessageSocketEvent
+    public class GenericMessageSocketEvent : MessageSocketEvent
     {
-        public const string SUBTYPE = "message_changed";
-        
-        [DataMember(Name = "message")]
-        public Message Message { get; protected set; }
-
-        [IgnoreDataMember]
-        private new string Text { get; set; }
+        public const string SUBTYPE = "";
     }
 }

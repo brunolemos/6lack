@@ -1,8 +1,5 @@
-﻿using SlackSDK.Common;
-using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
-using Windows.UI;
 
 namespace SlackSDK.Models
 {
@@ -13,6 +10,14 @@ namespace SlackSDK.Models
     {
         [DataMember(Name = "id")]
         public string ID { get; protected set; }
+
+        [IgnoreDataMember]
+        public Channels Channels { get { return channels; } internal set { if (channels != value) { channels = value; NotifyPropertyChanged("Channels"); } } }
+        private Channels channels;
+
+        [IgnoreDataMember]
+        public Users Members { get { return members; } internal set { if (members != value) { members = value; NotifyPropertyChanged("Members"); } } }
+        private Users members;
 
         [DataMember(Name = "name")]
         public string Name { get { return name; } set { if (name != value) { name = value; NotifyPropertyChanged("Name"); } } }

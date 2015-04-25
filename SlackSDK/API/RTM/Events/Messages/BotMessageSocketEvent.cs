@@ -16,9 +16,6 @@ namespace SlackSDK.API.RTM.Events.Messages
     public class BotMessageSocketEvent : MessageSocketEvent
     {
         public const string SUBTYPE = "bot_message";
-        
-        [DataMember(Name = "text")]
-        public string Text { get; protected set; }
 
         [DataMember(Name = "bot_id")]
         public string BotID { get; protected set; }

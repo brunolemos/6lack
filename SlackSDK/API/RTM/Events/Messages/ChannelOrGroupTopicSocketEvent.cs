@@ -16,8 +16,5 @@ namespace SlackSDK.API.RTM.Events.Messages
 
         [DataMember(Name = "topic")]
         public string Topic { get; protected set; }
-
-        [DataMember(Name = "text")]
-        public string Text { get; protected set; }
     }
 }

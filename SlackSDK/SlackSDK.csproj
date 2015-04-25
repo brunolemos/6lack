@@ -47,6 +47,7 @@
     <Compile Include="API\RTM\Events\Messages\ChannelOrGroupTopicSocketEvent.cs" />
     <Compile Include="API\RTM\Events\Messages\ChannelOrGroupLeaveSocketEvent.cs" />
     <Compile Include="API\RTM\Events\Messages\ChannelOrGroupJoinSocketEvent.cs" />
+    <Compile Include="API\RTM\Events\Messages\GenericMessageSocketEvent.cs" />
     <Compile Include="API\RTM\Events\Messages\MessageDeletedSocketEvent.cs" />
     <Compile Include="API\RTM\Events\Messages\MessageChangedSocketEvent.cs" />
     <Compile Include="API\RTM\Events\Messages\BotMessageSocketEvent.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SlackAPI.cs" />
     <Content Include="Utils\Constants.cs.txt" />
+    <Compile Include="SlackClient.cs" />
     <Compile Include="Utils\Constants.cs" />
     <Compile Include="Utils\Extensions.cs" />
   </ItemGroup>

@@ -52,13 +52,13 @@ namespace SlackSDK.API.Web
             return response?.Channel;
         }
 
-        public async Task<ChannelHistoryResponse> GetChannelHistory(string channelName, string latest = null, string oldest = null, bool? inclusive = null, ushort? count = null)
+        public async Task<ChannelHistoryResponse> GetChannelHistory(string channelID, string latest = null, string oldest = null, bool? inclusive = null, ushort? count = null)
         {
             var uri = new Uri(API_BASE_URI, CHANNEL_HISTORY_METHOD);
 
             var content = new Dictionary<string, string>();
             content.Add("token",    Token);
-            content.Add("channel",  channelName);
+            content.Add("channel",  channelID);
 
             //optional
             if(!string.IsNullOrEmpty(latest))   content.Add("latest",       latest.ToString());

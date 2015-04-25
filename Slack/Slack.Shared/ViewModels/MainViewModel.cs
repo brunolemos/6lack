@@ -1,4 +1,5 @@
 using Slack.Common;
+using SlackSDK;
 using SlackSDK.Models;
 
 namespace Slack.ViewModels
@@ -7,9 +8,18 @@ namespace Slack.ViewModels
     {
         public RelayCommand SendMessageCommand { get; private set; }
 
-        public Channels Channels { get { return channels; } set { channels = value; NotifyPropertyChanged("Channels"); } } //channels.Replace(value, this, "Channels"); } }
-        private Channels channels = new Channels();
-        
+        public static Teams Teams { get { return SlackClient.Teams; } }
+        public static Users Users { get { return SlackClient.Users; } }
+
+        public Messages Messages { get { return messages; } set { messages = value; NotifyPropertyChanged("Messages"); } }
+        private Messages messages = new Messages();
+
+        public Team SelectedTeam { get { return selectedTeam; } set { selectedTeam = value; NotifyPropertyChanged("SelectedTeam"); } }
+        private Team selectedTeam;
+
+        public Channel SelectedChannel { get { return selectedChannel; } set { selectedChannel = value; NotifyPropertyChanged("SelectedChannel"); } }
+        private Channel selectedChannel;
+
         public MainViewModel()
         {
             SendMessageCommand = new RelayCommand(SendMessage);

@@ -1,5 +1,6 @@
 ﻿using SlackSDK.Common;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Runtime.Serialization;
 
 namespace SlackSDK.Models
@@ -15,6 +16,10 @@ namespace SlackSDK.Models
         [DataMember(Name = "name")]
         public string Name { get { return name; } protected set { if (name != value) { name = value; NotifyPropertyChanged("Name"); } } }
         private string name;
+
+        [IgnoreDataMember]
+        public Messages Messages { get { return messages; } set { if (messages != value) { messages = value; NotifyPropertyChanged("Messages"); } } }
+        private Messages messages;
 
         [DataMember(Name = "is_channel")]
         public bool IsChannel { get { return true; } }
@@ -34,7 +39,7 @@ namespace SlackSDK.Models
         public string CreatedBy { get; protected set; }
 
         [DataMember(Name = "members")]
-        public ObservableCollection<string> Members { get; } = new ObservableCollection<string>();
+        public ObservableCollection<string> MembersIDs { get; } = new ObservableCollection<string>();
 
         [DataMember(Name = "topic")]
         public Topic Topic { get { return topic; } protected set { if (topic != value) { topic = value; NotifyPropertyChanged("Topic"); } } }

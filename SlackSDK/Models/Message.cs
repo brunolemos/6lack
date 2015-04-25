@@ -1,5 +1,7 @@
-﻿using SlackSDK.Common;
+﻿using SlackSDK.API.RTM.Events;
+using SlackSDK.Common;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Runtime.Serialization;
 
 namespace SlackSDK.Models
@@ -9,11 +11,23 @@ namespace SlackSDK.Models
     [DataContract]
     public class Message : BaseModel
     {
-        //[DataMember(Name = "channel")]
-        //public string ChannelID { get; protected set; }
+        public Message() {}
+
+        public Message(MessageSocketEvent socketEvent)
+        {
+            ChannelOrGroupID = socketEvent.ChannelOrGroupID;
+            Text = socketEvent.Text;
+            Timestamp = socketEvent.Timestamp;
+        }
+
+        [DataMember(Name = "channel")]
+        public string ChannelOrGroupID { get; protected set; }
 
         [DataMember(Name = "user")]
         public string UserID { get; protected set; }
+
+        [IgnoreDataMember]
+        public User User { get { return string.IsNullOrEmpty(UserID) ? null : SlackClient.Users.Where(user => user.ID == UserID).FirstOrDefault(); } }
 
         [DataMember(Name = "text")]
         public string Text { get; protected set; }

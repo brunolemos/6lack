@@ -1,5 +1,4 @@
-﻿using SlackSDK.Models;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
 namespace SlackSDK.API.RTM.Events
 {
@@ -25,6 +24,9 @@ namespace SlackSDK.API.RTM.Events
 
         [DataMember(Name = "channel")]
         public string ChannelOrGroupID { get; protected set; }
+
+        [DataMember(Name = "text")]
+        public string Text { get; protected set; }
 
         [DataMember(Name = "ts")]
         public string Timestamp { get; protected set; }
