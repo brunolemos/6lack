@@ -9,7 +9,7 @@
         <x:String x:Key="AppName">6lack</x:String>
 
         <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="White"/>
-        
+
         <ViewModels:MainViewModel x:Key="MainViewModel"/>
     </Application.Resources>
 </Application>

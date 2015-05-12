@@ -2,15 +2,10 @@
 using Slack.Utils;
 using Slack.ViewModels;
 using SlackSDK;
-using SlackSDK.API.RTM.Events;
-using SlackSDK.Models;
 using System;
 using System.Diagnostics;
 using System.Linq;
 using Windows.ApplicationModel.Core;
-using Windows.Networking.Sockets;
-using Windows.Storage.Streams;
-using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
@@ -33,17 +28,18 @@ namespace Slack.Views
 
         private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            //string code = await AuthAPI.Instance.AuthenticateAsync();
-            //if (code == null) return;
+            if (string.IsNullOrEmpty(AppSettings.Instance.AccessToken))
+            {
+                string code = await SlackAPI.WebAPI.AuthenticateAsync();
+                if (String.IsNullOrEmpty(code)) return;
 
-            //var response = await AuthAPI.Instance.GetAccessToken(code);
-            //if (response == null) return;
+                AppSettings.Instance.AccessToken = await SlackAPI.WebAPI.GetAccessToken(code);
+            }
 
-            string token = "xoxp-3916588710-3916588712-3914490519-c693ac";//response.AccessToken
-            if (String.IsNullOrEmpty(token)) return;
+            Debug.WriteLine("Token: '{0}'", AppSettings.Instance.AccessToken);
+            if (string.IsNullOrEmpty(AppSettings.Instance.AccessToken)) return;
 
-            Debug.WriteLine("Token: " + token);
-            SlackAPI.Config(token);
+            SlackAPI.Config(AppSettings.Instance.AccessToken);
 
             //var channels = await ChannelAPI.Instance.GetChannelList();
             //viewModel.Channels = channels;

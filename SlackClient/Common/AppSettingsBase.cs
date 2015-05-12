@@ -29,10 +29,11 @@ namespace Slack.Common
             {
                 var settings = isRoaming ? roamingSettings : localSettings;
                 var value = settings.Values[key];
-                if (value == null || String.IsNullOrEmpty(value.ToString())) return defaultValue;
-                //Debug.WriteLine("Value of {0} is {1}", key, value.ToString());
 
-                return value.GetType() != typeof(string) ? (T)value : JsonConvert.DeserializeObject<T>(value.ToString());
+                //Debug.WriteLine("Value of {0} is {1}", key, value.ToString());
+                if (value == null || String.IsNullOrEmpty(value.ToString())) return defaultValue;
+
+                return value?.GetType() == typeof(string) ? (T)value : JsonConvert.DeserializeObject<T>(value.ToString());
             }
             catch (Exception)
             {
@@ -44,7 +45,7 @@ namespace Slack.Common
         {
             try
             {
-                string content = JsonConvert.SerializeObject(value);
+                string content = value == null || value.GetType() == typeof(string) ? value?.ToString() : JsonConvert.SerializeObject(value);
                 //Debug.WriteLine("SetValue of {0} to {1}", key, content);
 
                 var settings = isRoaming ? roamingSettings : localSettings;

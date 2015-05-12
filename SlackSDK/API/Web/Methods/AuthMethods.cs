@@ -49,9 +49,6 @@ namespace SlackSDK.API.Web
 
             try
             {
-#if WINDOWS_PHONE_APP
-                //WebAuthenticationBroker.AuthenticateAndContinue(StartUri, EndUri, null, WebAuthenticationOptions.None);
-#else
                 WebAuthenticationResult WebAuthenticationResult =
                     await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, StartUri, EndUri);
 
@@ -69,9 +66,6 @@ namespace SlackSDK.API.Web
                         Debug.WriteLine("Error returned by AuthenticateAsync(): {0}", WebAuthenticationResult.ResponseStatus.ToString());
                         return null;
                 }
-
-
-#endif
             }
 
             // Bad Parameter, SSL/TLS Errors and Network Unavailable errors are to be handled here.
