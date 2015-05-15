@@ -1,91 +1,175 @@
 ﻿<Page
     x:Name="Root"
     x:Class="Slack.Views.MainPage"
-    DataContext="{Binding Source={StaticResource MainViewModel}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Slack.Views"
-    xmlns:common="using:Slack.Common"
+    xmlns:models="using:SlackSDK.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" 
+    DataContext="{Binding viewModel, Mode=OneWay, RelativeSource={RelativeSource Mode=Self}}" 
+    d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
     
     <Page.Resources>
-        <DataTemplate x:Key="ChannelDataTemplate">
+        <DataTemplate x:Key="ChannelDataTemplate" x:DataType="models:Channel">
             <Grid>
                 <TextBlock>
-                    <Run Text="#"/><Run Text="{Binding Name}" />
+                    <Run Text="#"/><Run Text="{x:Bind Name}" />
                 </TextBlock>
             </Grid>
         </DataTemplate>
 
-        <DataTemplate x:Key="MessageDataTemplate">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="80"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Image Grid.Column="0" Source="{Binding User.Profile.Image48x48}" Width="36" Height="36"/>
-                <TextBlock Grid.Column="1" Text="{Binding Text}" />
-            </Grid>
-        </DataTemplate>
-        
-        <DataTemplate x:Key="MessageTemplate">
-            <Grid Margin="0,0,0,20" >
+        <DataTemplate x:Key="MessageTemplate" x:DataType="models:Message">
+            <Grid Margin="12" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Border VerticalAlignment="Top" CornerRadius="6" Width="60" Height="60" Background="#19000000"/>
+                
+                <Border VerticalAlignment="Top" CornerRadius="6" Width="36" Height="36">
+                    <Border.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="{x:Bind User.Profile.Image32x32.AbsolutePath}"/>
+                    </Border.Background>
+                </Border>
+                
                 <StackPanel Grid.Column="1" Margin="10,0,0,0" VerticalAlignment="Top">
-                    <TextBlock Text="{Binding User.Profile.RealName}" Style="{StaticResource TitleTextBlockStyle}" FontSize="18.667" Padding="0,3,0,6"/>
-                    <TextBlock Text="{Binding Text}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap" FontSize="18.667"/>
+                    <TextBlock Text="{x:Bind User.Profile.RealName}" FontSize="18.667" Padding="0,3,0,6"/>
+                    <TextBlock Text="{x:Bind Text}" TextWrapping="NoWrap" FontSize="18.667"/>
                 </StackPanel>
             </Grid>
         </DataTemplate>
     </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" MinWidth="100"/>
-                <ColumnDefinition Width="5*" MinWidth="300"/>
-                <ColumnDefinition Width="16*" MinWidth="300"/>
-            </Grid.ColumnDefinitions>
+    <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
 
-            <Grid Grid.Column="0" Background="#362432" RequestedTheme="Dark"/>
+                    <VisualState.Setters>
+                        <Setter Target="MainSplitView.DisplayMode" Value="Overlay"/>
+                        <Setter Target="MainSplitView.IsPaneOpen" Value="False"/>
+                        <Setter Target="MenuToggleButton.Visibility" Value="Visible"/>
+                    </VisualState.Setters>
+                </VisualState>
 
-            <Grid Grid.Column="1" Background="#51354b" RequestedTheme="Dark">
-                <ListView ItemsSource="{Binding}" DataContext="{Binding SelectedTeam.Channels}" ItemTemplate="{StaticResource ChannelDataTemplate}"/>
-            </Grid>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
 
-            <Grid Grid.Column="2" Background="White" RequestedTheme="Light">
-                <ListView ItemsSource="{Binding}" DataContext="{Binding Messages}" ItemTemplate="{StaticResource MessageTemplate}" SelectionMode="None">
-                    <!--<ListView.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapGrid Orientation="Vertical" HorizontalChildrenAlignment="Stretch"/>
-                        </ItemsPanelTemplate>
-                    </ListView.ItemsPanel>
+                    <VisualState.Setters>
+                        <Setter Target="MainSplitView.DisplayMode" Value="Inline"/>
+                        <Setter Target="MainSplitView.IsPaneOpen" Value="True"/>
+                        <Setter Target="MenuToggleButton.Visibility" Value="Collapsed"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <SplitView x:Name="MainSplitView" DisplayMode="Inline" Background="White" PaneBackground="#51354b"
+                   IsPaneOpen="True" CompactPaneLength="68" OpenPaneLength="300" Canvas.ZIndex="100">
+            <SplitView.Pane>
+                <Grid RequestedTheme="Dark">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Background="{ThemeResource AppSidebarHeaderFooterBackgroundBrush}">
+                        <Grid Margin="18,0" Height="48">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="{Binding SelectedTeam.Name}" FontWeight="Bold" TextTrimming="CharacterEllipsis" VerticalAlignment="Center"/>
+
+                            <AppBarButton Grid.Column="2" Icon="More" IsCompact="True" VerticalAlignment="Center">
+                                <AppBarButton.Flyout>
+                                    <MenuFlyout>
+                                        <MenuFlyoutItem Text="Team Settings"/>
+                                        <MenuFlyoutItem Text="User Administration"/>
+                                        <MenuFlyoutItem Text="Send Invitations"/>
+                                        <MenuFlyoutSeparator/>
+                                        <MenuFlyoutItem Text="Sign out of 6slack"/>
+                                    </MenuFlyout>
+                                </AppBarButton.Flyout>
+                            </AppBarButton>
+                        </Grid>
+                    </Grid>
+
+                    <ScrollViewer Grid.Row="1">
+                        <StackPanel>
+                            <ListView ItemsSource="{Binding SelectedTeam.Channels}" ItemTemplate="{StaticResource ChannelDataTemplate}"/>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <Grid Grid.Row="2" Background="{ThemeResource AppSidebarHeaderFooterBackgroundBrush}">
+                        <Grid Margin="18,12,0,12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Width="48" Height="48" CornerRadius="6" Background="{ThemeResource SystemControlBackgroundAltMediumLowBrush}" VerticalAlignment="Center"/>
+
+                            <StackPanel Grid.Column="1" Margin="12,0" VerticalAlignment="Center">
+                                <TextBlock Text="brunolemos" FontWeight="SemiBold"/>
+                                <TextBlock Text="online"/>
+                            </StackPanel>
+
+                            <AppBarButton Grid.Column="2" Icon="More" IsCompact="True" VerticalAlignment="Center">
+                                <AppBarButton.Flyout>
+                                    <MenuFlyout>
+                                        <MenuFlyoutItem Text="Preferences"/>
+                                        <MenuFlyoutItem Text="My Account"/>
+                                        <MenuFlyoutItem Text="My Profile"/>
+                                        <MenuFlyoutItem Text="Change Photo"/>
+                                        <MenuFlyoutSeparator/>
+                                        <MenuFlyoutItem Text="Sign Out"/>
+                                    </MenuFlyout>
+                                </AppBarButton.Flyout>
+                            </AppBarButton>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </SplitView.Pane>
+                
+            <SplitView.Content>
+                <Grid RequestedTheme="Light">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <CommandBar Grid.Row="0" Background="Transparent">
+                        <CommandBar.Content>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <AppBarButton x:Name="MenuToggleButton" IsCompact="True" Label="Menu" Click="MenuToggleButton_Click" ToolTipService.ToolTip="Menu">
+                                    <FontIcon Glyph="&#xE700;"/>
+                                </AppBarButton>
+                                
+                                <TextBlock Text="{Binding SelectedChannel.Name}" FontWeight="Bold" FontSize="{StaticResource TextStyleLargeFontSize}" Padding="12"/>
+                            </StackPanel>
+                        </CommandBar.Content>
                     
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem">
-                            <Setter Property="Padding" Value="0"/>
-                            <Setter Property="Margin" Value="0"/>
-                            <Setter Property="MinHeight" Value="0"/>
-                            <Setter Property="Height" Value="Auto"/>
-                            
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="ListViewItem">
-                                        <ListViewItemPresenter ContentMargin="0" Padding="0"/>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
-                    </ListView.ItemContainerStyle>-->
-                </ListView>
-            </Grid>
-        </Grid>
+                        <CommandBar.PrimaryCommands>
+                            <AppBarButton Label="Mentions" Icon="Account"/>
+                            <AppBarButton Label="Starred" Icon="Favorite"/>
+                        </CommandBar.PrimaryCommands>
+                    </CommandBar>
+
+                    <ListView Grid.Row="1" ItemsSource="{Binding Messages}" ItemTemplate="{StaticResource MessageTemplate}" SelectionMode="None"/>
+
+                    <!--<CommandBar Grid.Row="2"/>-->
+                </Grid>
+            </SplitView.Content>
+        </SplitView>
     </Grid>
 </Page>

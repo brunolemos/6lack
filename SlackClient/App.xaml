@@ -3,13 +3,14 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Slack"
-    xmlns:ViewModels="using:Slack.ViewModels">
+    xmlns:ViewModels="using:Slack.ViewModels"
+    RequestedTheme="Light">
 
     <Application.Resources>
-        <x:String x:Key="AppName">6lack</x:String>
-
-        <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="White"/>
-
-        <ViewModels:MainViewModel x:Key="MainViewModel"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///Resources/DefaultResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

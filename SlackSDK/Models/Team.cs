@@ -12,11 +12,11 @@ namespace SlackSDK.Models
         public string ID { get; protected set; }
 
         [IgnoreDataMember]
-        public Channels Channels { get { return channels; } internal set { if (channels != value) { channels = value; NotifyPropertyChanged("Channels"); } } }
+        public Channels Channels { get { return channels; } set { channels = value; NotifyPropertyChanged("Channels"); } }
         private Channels channels;
 
         [IgnoreDataMember]
-        public Users Members { get { return members; } internal set { if (members != value) { members = value; NotifyPropertyChanged("Members"); } } }
+        public Users Members { get { return members; } internal set { members = value; NotifyPropertyChanged("Members"); } }
         private Users members;
 
         [DataMember(Name = "name")]

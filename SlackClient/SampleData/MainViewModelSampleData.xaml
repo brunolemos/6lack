@@ -1,0 +1,346 @@
+﻿<ViewModels:MainViewModel xmlns:ViewModels="using:Slack.ViewModels" xmlns:Models="using:SlackSDK.Models" xmlns:System="using:System" xmlns:Common="using:Slack.Common">
+	<ViewModels:MainViewModel.Messages>
+		<Models:Message ChannelOrGroupID="Eget class elit adipiscing" Text="Ultricies mattis facilisi donec mauris" Timestamp="Faucibus vestibulum commodo" UserID="Curae luctus per magnis sed">
+			<Models:Message.User>
+				<Models:User Color="Nibh nisi sem blandit" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Enim erat eros" Name="Eleifend parturient tristique" Presence="AWAY"/>
+			</Models:Message.User>
+		</Models:Message>
+		<Models:Message ChannelOrGroupID="Vestibulum adipiscing" Text="Conubia cubilia adipiscing parturient" Timestamp="Morbi nulla nam vestibulum vestibulum" UserID="Parturient sit">
+			<Models:Message.User>
+				<Models:User Color="Fusce lorem odio" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Vestibulum vestibulum habitant" Name="Nisl mollis etiam nunc vel" Presence="AWAY"/>
+			</Models:Message.User>
+		</Models:Message>
+		<Models:Message ChannelOrGroupID="Adipiscing montes nostra ornare" Text="Vestibulum dolor egestas fames urna" Timestamp="Curabitur euismod phasellus" UserID="Platea parturient venenatis orci primis">
+			<Models:Message.User>
+				<Models:User Color="Vestibulum vulputate augue adipiscing parturient" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Vestibulum sed dapibus pede" Name="Quam quis proin" Presence="AWAY"/>
+			</Models:Message.User>
+		</Models:Message>
+		<Models:Message ChannelOrGroupID="Feugiat cras" Text="Interdum sociis amet iaculis" Timestamp="Taciti tellus lobortis lacinia felis" UserID="Vestibulum adipiscing parturient">
+			<Models:Message.User>
+				<Models:User Color="Semper vestibulum" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Duis rutrum" Name="Sapien nunc inceptos gravida" Presence="ACTIVE"/>
+			</Models:Message.User>
+		</Models:Message>
+		<Models:Message ChannelOrGroupID="Laoreet consequat" Text="Elit dis" Timestamp="Pharetra elementum placerat est facilisis" UserID="Vestibulum adipiscing">
+			<Models:Message.User>
+				<Models:User Color="Nascetur eget natoque" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Parturient ante convallis arcu" Name="Ipsum diam justo lacus dignissim" Presence="AWAY"/>
+			</Models:Message.User>
+		</Models:Message>
+		<Models:Message ChannelOrGroupID="Tempor hac lorem fermentum" Text="Mus enim erat sagittis nec" Timestamp="Tortor morbi" UserID="Magna pulvinar fringilla">
+			<Models:Message.User>
+				<Models:User Color="Posuere leo vestibulum" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Tempus habitasse" Name="Massa metus" Presence="AWAY"/>
+			</Models:Message.User>
+		</Models:Message>
+		<Models:Message ChannelOrGroupID="Eros potenti" Text="Torquent aenean sed integer" Timestamp="Nisi sem ultrices" UserID="Hendrerit senectus non per nibh">
+			<Models:Message.User>
+				<Models:User Color="Viverra varius aliquam" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Neque vestibulum sociosqu suscipit pretium" Name="Adipiscing rhoncus parturient sodales turpis" Presence="ACTIVE"/>
+			</Models:Message.User>
+		</Models:Message>
+		<Models:Message ChannelOrGroupID="Sit himenaeos mauris" Text="Congue orci" Timestamp="Blandit imperdiet sed" UserID="Nisl quisque vehicula nullam netus">
+			<Models:Message.User>
+				<Models:User Color="Vestibulum aliquam aliquet nam odio" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Aptent auctor nunc nulla" Name="Volutpat vivamus vel" Presence="AWAY"/>
+			</Models:Message.User>
+		</Models:Message>
+		<Models:Message ChannelOrGroupID="Maecenas malesuada commodo" Text="Quam libero quis urna" Timestamp="Purus porttitor" UserID="Praesent cursus porta">
+			<Models:Message.User>
+				<Models:User Color="Penatibus egestas" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Conubia dis dictum pede" Name="Cubilia lectus dapibus est" Presence="AWAY"/>
+			</Models:Message.User>
+		</Models:Message>
+		<Models:Message ChannelOrGroupID="Vestibulum accumsan euismod feugiat adipiscing" Text="Amet risus ligula lacinia litora" Timestamp="Adipiscing laoreet velit natoque ante" UserID="Hac parturient cras tincidunt">
+			<Models:Message.User>
+				<Models:User Color="Vestibulum nunc bibendum" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Duis gravida leo vestibulum tristique" Name="Ultricies iaculis" Presence="AWAY"/>
+			</Models:Message.User>
+		</Models:Message>
+	</ViewModels:MainViewModel.Messages>
+	<ViewModels:MainViewModel.SelectedTeam>
+		<Models:Team Domain="Interdum aliquam nam" EmailDomain="Luctus dolor malesuada" ID="Dictumst luctus eleifend" MessageEditWindowMins="Fames integer urna" Name="Imperdiet ligula litora vestibulum" OverStorageLimit="True">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Vitae class" CreatedAt="Magnis mattis mus diam" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Venenatis vulputate parturient vestibulum" IsMember="False" LastReadAt="Curabitur mauris" Name="Arcu vestibulum"/>
+				<Models:Channel CreatedBy="Per rhoncus sodales eget sed" CreatedAt="Non pretium" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Nec adipiscing" IsMember="False" LastReadAt="Faucibus curae phasellus donec" Name="Facilisi posuere potenti"/>
+				<Models:Channel CreatedBy="Nam sed" CreatedAt="Vel habitant elit enim" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Parturient sem consequat vestibulum etiam" IsMember="False" LastReadAt="Lorem viverra aliquam mollis morbi" Name="Sit vestibulum adipiscing fusce"/>
+				<Models:Channel CreatedBy="Interdum lobortis dolor" CreatedAt="Proin dignissim dis augue est" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Parturient inceptos erat" IsMember="False" LastReadAt="Nibh nostra" Name="Montes eros convallis nulla"/>
+				<Models:Channel CreatedBy="Ipsum facilisis" CreatedAt="Fames integer felis" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Vestibulum nisi" IsMember="False" LastReadAt="Quisque ornare adipiscing" Name="Vestibulum hac elementum"/>
+				<Models:Channel CreatedBy="Parturient rutrum nascetur sapien fringilla" CreatedAt="Primis justo" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Vivamus leo" IsMember="False" LastReadAt="Aliquam nisl lacus habitasse" Name="Fermentum platea"/>
+				<Models:Channel CreatedBy="Nunc massa sagittis mus himenaeos" CreatedAt="Pulvinar lorem blandit magna" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Pharetra aliquet" IsMember="False" LastReadAt="Vestibulum imperdiet malesuada" Name="Semper placerat vestibulum hendrerit"/>
+				<Models:Channel CreatedBy="Sociis sociosqu" CreatedAt="Nec quis senectus urna" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Adipiscing commodo odio" IsMember="False" LastReadAt="Vestibulum penatibus suscipit" Name="Orci pede metus parturient quam"/>
+				<Models:Channel CreatedBy="Cras neque adipiscing duis netus" CreatedAt="Non vestibulum torquent morbi" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Porttitor taciti" IsMember="False" LastReadAt="Tristique tellus" Name="Tincidunt conubia"/>
+				<Models:Channel CreatedBy="Maecenas tempus dapibus purus venenatis" CreatedAt="Tempor porta per vehicula volutpat" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Parturient ultrices" IsMember="False" LastReadAt="Egestas tortor vestibulum" Name="Nulla ultricies cubilia"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Feugiat varius vestibulum" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Turpis sed euismod" Name="Sem risus vulputate" Presence="ACTIVE"/>
+				<Models:User Color="Amet praesent" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Adipiscing sit vel nam" Name="Curabitur velit nunc" Presence="ACTIVE"/>
+				<Models:User Color="Mauris nullam dis parturient" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Vitae ante arcu diam" Name="Aenean class sed phasellus" Presence="AWAY"/>
+				<Models:User Color="Eget elit cursus" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Aptent consequat gravida curae convallis" Name="Dignissim vestibulum vestibulum auctor congue" Presence="AWAY"/>
+				<Models:User Color="Adipiscing hac dictum leo" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Donec est" Name="Accumsan bibendum" Presence="ACTIVE"/>
+				<Models:User Color="Lacinia etiam mus fusce vestibulum" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Enim erat eros" Name="Elementum nibh iaculis nisi parturient" Presence="AWAY"/>
+				<Models:User Color="Nulla facilisis nec non" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Laoreet nisl natoque dictumst" Name="Vestibulum posuere lorem morbi" Presence="AWAY"/>
+				<Models:User Color="Faucibus proin" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Eleifend nunc odio lectus orci" Name="Potenti libero facilisi fermentum pede" Presence="AWAY"/>
+				<Models:User Color="Per adipiscing quis sed fringilla" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Pretium rhoncus" Name="Quam habitant" Presence="ACTIVE"/>
+				<Models:User Color="Himenaeos augue vel" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Sodales inceptos habitasse sem" Name="Parturient vestibulum viverra sit hendrerit" Presence="AWAY"/>
+			</Models:Team.Members>
+		</Models:Team>
+	</ViewModels:MainViewModel.SelectedTeam>
+	<ViewModels:MainViewModel.SelectedChannel>
+		<Models:Channel CreatedBy="Turpis adipiscing parturient malesuada" CreatedAt="Imperdiet proin tempus tortor duis" IsChannel="False" IsGeneral="False" IsArchived="True" ID="Cras magnis felis" IsMember="True" LastReadAt="Ipsum aliquam vestibulum adipiscing faucibus" Name="Quisque duis ipsum lobortis">
+			<Models:Channel.LastestMessage>
+				<Models:Message ChannelOrGroupID="Non integer justo lacus" Text="Adipiscing interdum sem eros" Timestamp="Phasellus lectus metus" UserID="Elit parturient vestibulum habitant">
+					<Models:Message.User>
+						<Models:User Color="Enim erat inceptos dictum sed" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Curabitur lorem magna congue" Name="Cursus massa quisque per vestibulum" Presence="ACTIVE"/>
+					</Models:Message.User>
+				</Models:Message>
+			</Models:Channel.LastestMessage>
+			<Models:Channel.Messages>
+				<Models:Message ChannelOrGroupID="Sed nunc amet" Text="Penatibus nascetur adipiscing mollis" Timestamp="Lacus arcu" UserID="Mattis mauris justo ante vivamus"/>
+				<Models:Message ChannelOrGroupID="Pharetra dis placerat porttitor aliquam" Text="Massa montes" Timestamp="Metus diam" UserID="Aliquet lorem magna"/>
+				<Models:Message ChannelOrGroupID="Tincidunt tristique blandit eget" Text="Est dapibus morbi hac egestas" Timestamp="Elit enim neque" UserID="Commodo pulvinar conubia cubilia"/>
+				<Models:Message ChannelOrGroupID="Ultricies parturient" Text="Nulla sagittis" Timestamp="Venenatis senectus vulputate ornare" UserID="Erat vestibulum netus leo nostra"/>
+				<Models:Message ChannelOrGroupID="Curabitur vestibulum" Text="Eros platea primis nec sociosqu" Timestamp="Non porta adipiscing consequat" UserID="Phasellus mus"/>
+				<Models:Message ChannelOrGroupID="Nibh per convallis suscipit" Text="Sed sapien risus nisl" Timestamp="Velit parturient" UserID="Nisi rutrum purus"/>
+				<Models:Message ChannelOrGroupID="Dignissim vitae nunc" Text="Sem torquent odio class" Timestamp="Ultrices semper sit" UserID="Euismod elementum"/>
+				<Models:Message ChannelOrGroupID="Curae vehicula facilisis" Text="Vel feugiat" Timestamp="Vestibulum donec sociis nam" UserID="Orci pede vestibulum fermentum"/>
+				<Models:Message ChannelOrGroupID="Gravida quam taciti etiam fusce" Text="Volutpat lorem" Timestamp="Maecenas quis" UserID="Iaculis lacinia"/>
+				<Models:Message ChannelOrGroupID="Fringilla urna" Text="Habitasse tellus tempor natoque" Timestamp="Hendrerit himenaeos posuere" UserID="Morbi nulla cras laoreet"/>
+			</Models:Channel.Messages>
+			<Models:Channel.MembersIDs>
+				<System:String>Varius nunc penatibus amet</System:String>
+				<System:String>Porttitor vestibulum ante tincidunt</System:String>
+				<System:String>Augue sed</System:String>
+				<System:String>Dis praesent aenean</System:String>
+				<System:String>Vestibulum potenti pretium</System:String>
+				<System:String>Adipiscing parturient</System:String>
+				<System:String>Est vestibulum</System:String>
+				<System:String>Hac mauris accumsan nullam vestibulum</System:String>
+				<System:String>Rhoncus leo</System:String>
+				<System:String>Arcu diam</System:String>
+			</Models:Channel.MembersIDs>
+			<Models:Channel.Purpose>
+				<Models:Purpose CreatedBy="Facilisi venenatis auctor" UpdatedAt="Felis vulputate vestibulum" Value="Parturient dolor viverra fames eleifend"/>
+			</Models:Channel.Purpose>
+			<Models:Channel.Topic>
+				<Models:Topic CreatedBy="Mus dictumst nec sodales" UpdatedAt="Adipiscing ultricies" Value="Aptent tristique bibendum eget"/>
+			</Models:Channel.Topic>
+			<Models:Channel.UnreadCount>
+				<System:UInt32/>
+			</Models:Channel.UnreadCount>
+			<Models:Channel.UnreadCountDisplay>
+				<System:UInt32/>
+			</Models:Channel.UnreadCountDisplay>
+		</Models:Channel>
+	</ViewModels:MainViewModel.SelectedChannel>
+	<ViewModels:MainViewModel.SendMessageCommand>
+		<Common:RelayCommand/>
+	</ViewModels:MainViewModel.SendMessageCommand>
+	<ViewModels:MainViewModel.Teams>
+		<Models:Team Domain="Ante vestibulum" EmailDomain="Leo parturient mus" ID="Maecenas class curae nam" MessageEditWindowMins="Nec lorem rutrum" Name="Platea adipiscing hac primis" OverStorageLimit="False">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Integer adipiscing parturient praesent accumsan" CreatedAt="Sed nullam aliquam dis" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Curabitur phasellus consequat convallis aenean" IsMember="False" LastReadAt="Duis vestibulum" Name="Mauris cras vestibulum donec etiam"/>
+				<Models:Channel CreatedBy="Vestibulum ante arcu fusce" CreatedAt="Adipiscing parturient" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Aptent vestibulum quisque nunc amet" IsMember="False" LastReadAt="Diam bibendum lorem auctor blandit" Name="Vivamus aliquam aliquet dignissim elementum"/>
+				<Models:Channel CreatedBy="Mus nec nulla vestibulum" CreatedAt="Parturient leo dictumst" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Facilisis congue morbi" IsMember="False" LastReadAt="Eget commodo" Name="Est hac vestibulum cursus adipiscing"/>
+				<Models:Channel CreatedBy="Per augue" CreatedAt="Fringilla proin dapibus facilisi" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Elit fermentum eleifend dictum" IsMember="False" LastReadAt="Habitasse ligula egestas litora" Name="Lectus conubia non libero cubilia"/>
+				<Models:Channel CreatedBy="Hendrerit adipiscing himenaeos felis sed" CreatedAt="Euismod vestibulum habitant fames" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Dolor enim" IsMember="False" LastReadAt="Inceptos luctus" Name="Erat faucibus eros"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Feugiat mauris sem sit" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Magnis interdum nibh" Name="Mattis parturient nisi" Presence="ACTIVE"/>
+				<Models:User Color="Justo adipiscing" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Mollis nisl vestibulum ipsum" Name="Nunc lobortis nascetur montes vestibulum" Presence="ACTIVE"/>
+				<Models:User Color="Nostra nam" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Odio gravida imperdiet iaculis malesuada" Name="Pharetra lacinia laoreet vel parturient" Presence="ACTIVE"/>
+				<Models:User Color="Sagittis posuere dis quis" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Placerat vestibulum orci pede quam" Name="Natoque sed pulvinar" Presence="ACTIVE"/>
+				<Models:User Color="Duis lacus ornare nunc amet" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Penatibus porttitor est senectus urna" Name="Cras vestibulum" Presence="ACTIVE"/>
+			</Models:Team.Members>
+		</Models:Team>
+		<Models:Team Domain="Nulla auctor malesuada" EmailDomain="Leo parturient" ID="Non sapien potenti tincidunt tristique" MessageEditWindowMins="Placerat pulvinar vestibulum sagittis" Name="Potenti pharetra" OverStorageLimit="False">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Ultrices vestibulum massa adipiscing parturient" CreatedAt="Torquent per" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Sociosqu magna" IsMember="False" LastReadAt="Metus vehicula arcu volutpat vestibulum" Name="Suscipit pretium rhoncus"/>
+				<Models:Channel CreatedBy="Accumsan quisque curabitur vivamus" CreatedAt="Vulputate neque praesent integer" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Ultricies morbi" IsMember="False" LastReadAt="Diam netus aliquam" Name="Sodales maecenas viverra venenatis aliquam"/>
+				<Models:Channel CreatedBy="Commodo semper sit dictumst" CreatedAt="Consequat sem blandit enim erat" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Eget aliquet bibendum" IsMember="False" LastReadAt="Eros conubia nulla nibh nisi" Name="Phasellus elit sed"/>
+				<Models:Channel CreatedBy="Purus convallis adipiscing sed dis" CreatedAt="Cubilia vestibulum taciti dapibus" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Vel sociis nisl eleifend" IsMember="False" LastReadAt="Est nunc hac leo" Name="Porta nam"/>
+				<Models:Channel CreatedBy="Tellus parturient tempor class curae" CreatedAt="Faucibus vitae" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Egestas dignissim euismod risus" IsMember="False" LastReadAt="Vestibulum odio feugiat habitant tempus" Name="Velit facilisi"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Vestibulum turpis interdum" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Mus gravida" Name="Nec tortor elementum inceptos non" Presence="AWAY"/>
+				<Models:User Color="Orci nascetur aenean iaculis" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Donec adipiscing lobortis" Name="Parturient varius" Presence="ACTIVE"/>
+				<Models:User Color="Sem sit vestibulum etiam vel" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Per facilisis sed" Name="Lacinia fermentum" Presence="ACTIVE"/>
+				<Models:User Color="Nam sed" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Fringilla habitasse" Name="Laoreet fusce natoque pede posuere" Presence="ACTIVE"/>
+				<Models:User Color="Himenaeos hac quis imperdiet adipiscing" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Dis hendrerit lorem mauris quam" Name="Est vestibulum nullam morbi aptent" Presence="ACTIVE"/>
+			</Models:Team.Members>
+		</Models:Team>
+		<Models:Team Domain="Interdum posuere sapien semper" EmailDomain="Massa rutrum" ID="Penatibus senectus sociosqu mus" MessageEditWindowMins="Lobortis sit nascetur potenti metus" Name="Pede parturient inceptos primis habitasse" OverStorageLimit="False">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Ultrices rhoncus cursus" CreatedAt="Ultricies pretium" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Suscipit vestibulum urna torquent proin" IsMember="False" LastReadAt="Adipiscing sodales" Name="Porttitor tincidunt augue tristique congue"/>
+				<Models:Channel CreatedBy="Integer quisque dolor fames" CreatedAt="Non aliquam" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Nec vehicula volutpat parturient" IsMember="False" LastReadAt="Venenatis felis" Name="Cras viverra maecenas praesent duis"/>
+				<Models:Channel CreatedBy="Ipsum amet aliquam lectus phasellus" CreatedAt="Dictum nunc curabitur" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Accumsan vulputate" IsMember="False" LastReadAt="Per ante arcu vestibulum" Name="Vestibulum vivamus"/>
+				<Models:Channel CreatedBy="Vel diam bibendum" CreatedAt="Justo libero" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Sed consequat" IsMember="False" LastReadAt="Eget convallis elit nam" Name="Sem adipiscing sit aliquet"/>
+				<Models:Channel CreatedBy="Vestibulum eleifend vestibulum dis" CreatedAt="Commodo parturient sed dictumst conubia" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Blandit dignissim" IsMember="False" LastReadAt="Lacus facilisis" Name="Ligula elementum"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Egestas enim adipiscing erat" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Est fermentum lorem" Name="Cubilia dapibus" Presence="AWAY"/>
+				<Models:User Color="Feugiat mattis hac" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Eros euismod" Name="Litora luctus nibh magnis" Presence="AWAY"/>
+				<Models:User Color="Iaculis vestibulum montes" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Mauris parturient leo facilisi mollis" Name="Gravida mus nec non" Presence="ACTIVE"/>
+				<Models:User Color="Habitant lacinia magna fringilla odio" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Faucibus nisi per nisl sed" Name="Vestibulum adipiscing nunc" Presence="ACTIVE"/>
+				<Models:User Color="Ornare orci platea" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Laoreet sem" Name="Nostra natoque" Presence="ACTIVE"/>
+			</Models:Team.Members>
+		</Models:Team>
+		<Models:Team Domain="Vel faucibus morbi litora luctus" EmailDomain="Nibh lacinia" ID="Morbi neque quam pretium pharetra" MessageEditWindowMins="Porttitor laoreet habitant natoque adipiscing" Name="Eleifend facilisi ligula" OverStorageLimit="False">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Taciti integer" CreatedAt="Sociis placerat" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Quis netus hendrerit rhoncus" IsMember="False" LastReadAt="Nulla pulvinar quisque sagittis" Name="Urna sodales himenaeos viverra aliquam"/>
+				<Models:Channel CreatedBy="Purus risus torquent malesuada vestibulum" CreatedAt="Imperdiet tempus nam suscipit sed" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Tellus senectus tempor" IsMember="False" LastReadAt="Aliquam penatibus porttitor" Name="Cras sociosqu porta vel vivamus"/>
+				<Models:Channel CreatedBy="Ultrices parturient" CreatedAt="Tortor ultricies venenatis" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Aliquet tincidunt blandit duis" IsMember="False" LastReadAt="Turpis dis varius conubia est" Name="Vestibulum adipiscing tristique velit commodo"/>
+				<Models:Channel CreatedBy="Nunc vitae consequat vehicula nullam" CreatedAt="Phasellus mauris" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Vulputate hac aenean" IsMember="False" LastReadAt="Amet convallis vestibulum dignissim" Name="Leo curabitur"/>
+				<Models:Channel CreatedBy="Mus diam vestibulum aptent auctor" CreatedAt="Ante arcu" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Vestibulum adipiscing" IsMember="False" LastReadAt="Vestibulum cubilia donec" Name="Parturient volutpat class curae"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Facilisis maecenas" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Etiam dapibus" Name="Nec elementum non" Presence="AWAY"/>
+				<Models:User Color="Praesent parturient" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Fusce egestas" Name="Fermentum euismod feugiat fringilla adipiscing" Presence="ACTIVE"/>
+				<Models:User Color="Himenaeos cursus imperdiet lorem vestibulum" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Habitasse per congue sed" Name="Gravida hendrerit" Presence="AWAY"/>
+				<Models:User Color="Lectus sit" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Accumsan vestibulum sem" Name="Malesuada dictum eget" Presence="AWAY"/>
+				<Models:User Color="Eros libero" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Iaculis penatibus elit bibendum" Name="Enim erat dictumst" Presence="AWAY"/>
+			</Models:Team.Members>
+		</Models:Team>
+		<Models:Team Domain="Egestas euismod netus auctor nulla" EmailDomain="Habitant eget inceptos dapibus penatibus" ID="Tincidunt tristique" MessageEditWindowMins="Interdum sed" Name="Nam diam faucibus" OverStorageLimit="False">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Mauris proin" CreatedAt="Nulla parturient est nisi potenti" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Nam magnis posuere" IsMember="False" LastReadAt="Ultricies venenatis" Name="Sed dis mattis"/>
+				<Models:Channel CreatedBy="Pretium adipiscing" CreatedAt="Mollis vestibulum lobortis nascetur" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Inceptos augue interdum nisl" IsMember="False" LastReadAt="Nunc odio phasellus fames" Name="Vulputate curabitur hac vestibulum dolor"/>
+				<Models:Channel CreatedBy="Consequat mus parturient nec" CreatedAt="Ipsum rhoncus" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Orci felis" IsMember="False" LastReadAt="Pulvinar vestibulum vestibulum nostra" Name="Pharetra montes placerat pede leo"/>
+				<Models:Channel CreatedBy="Urna parturient platea viverra vestibulum" CreatedAt="Sodales quis elementum sagittis justo" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Convallis dignissim" IsMember="False" LastReadAt="Senectus aliquam" Name="Non adipiscing per ornare quam"/>
+				<Models:Channel CreatedBy="Sit fermentum suscipit primis rutrum" CreatedAt="Sem cras vivamus parturient" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Vestibulum facilisis" IsMember="False" LastReadAt="Sapien fringilla semper duis" Name="Sed adipiscing sociosqu integer quisque"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Vestibulum lacus adipiscing torquent lorem" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Habitasse sociis" Name="Vestibulum taciti tellus tempor" Presence="AWAY"/>
+				<Models:User Color="Tempus tortor" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Nunc parturient magna vestibulum aliquam" Name="Ultrices hendrerit massa" Presence="AWAY"/>
+				<Models:User Color="Maecenas varius parturient imperdiet aliquet" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Turpis vestibulum adipiscing metus vehicula" Name="Himenaeos volutpat" Presence="AWAY"/>
+				<Models:User Color="Praesent ante vel cubilia" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Blandit malesuada" Name="Commodo vestibulum conubia aenean amet" Presence="AWAY"/>
+				<Models:User Color="Facilisi neque aptent" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Morbi accumsan arcu mauris bibendum" Name="Vestibulum dictumst eleifend nullam adipiscing" Presence="AWAY"/>
+			</Models:Team.Members>
+		</Models:Team>
+		<Models:Team Domain="Vestibulum vestibulum facilisi non" EmailDomain="Eleifend parturient nec fermentum fringilla" ID="Porta dis porttitor" MessageEditWindowMins="Sapien dapibus egestas purus per" Name="Facilisis rutrum mus adipiscing dictumst" OverStorageLimit="False">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Tincidunt nascetur risus velit iaculis" CreatedAt="Purus parturient" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Elit congue cursus lobortis" IsMember="False" LastReadAt="Tristique lacinia" Name="Feugiat gravida"/>
+				<Models:Channel CreatedBy="Venenatis hac vitae class" CreatedAt="Natoque posuere pharetra placerat enim" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Est vestibulum dictum ultricies" IsMember="False" LastReadAt="Pulvinar curae" Name="Laoreet lectus"/>
+				<Models:Channel CreatedBy="Adipiscing vulputate pretium fusce" CreatedAt="Etiam nibh" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Libero erat potenti" IsMember="False" LastReadAt="Mus ligula parturient lorem senectus" Name="Vestibulum leo donec sagittis eros"/>
+				<Models:Channel CreatedBy="Magnis nec vestibulum adipiscing proin" CreatedAt="Vestibulum luctus phasellus nulla sodales" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Sociosqu rhoncus" IsMember="False" LastReadAt="Augue viverra non" Name="Litora morbi suscipit curabitur torquent"/>
+				<Models:Channel CreatedBy="Mattis per fames" CreatedAt="Consequat nisl" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Aliquam ultrices" IsMember="False" LastReadAt="Sed sem quisque parturient" Name="Integer dolor nisi vehicula"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Ipsum justo lacus vestibulum vivamus" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Convallis vestibulum dignissim elementum" Name="Sit felis" Presence="AWAY"/>
+				<Models:User Color="Adipiscing parturient" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Mauris volutpat maecenas lorem" Name="Praesent vel magna massa nunc" Presence="AWAY"/>
+				<Models:User Color="Aliquet vestibulum sed" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Odio orci vestibulum nam mollis" Name="Aliquam metus montes morbi" Presence="AWAY"/>
+				<Models:User Color="Nostra accumsan neque ornare" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Dis est" Name="Blandit commodo" Presence="ACTIVE"/>
+				<Models:User Color="Leo primis porta bibendum" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Netus platea" Name="Conubia nulla hac cubilia" Presence="ACTIVE"/>
+			</Models:Team.Members>
+		</Models:Team>
+		<Models:Team Domain="Enim mauris adipiscing parturient proin" EmailDomain="Vestibulum sem elit convallis" ID="Euismod habitasse feugiat hendrerit" MessageEditWindowMins="Vestibulum cubilia" Name="Nulla consequat" OverStorageLimit="False">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Sociis vestibulum" CreatedAt="Adipiscing parturient" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Semper faucibus" IsMember="False" LastReadAt="Sed iaculis" Name="Himenaeos gravida habitant"/>
+				<Models:Channel CreatedBy="Taciti imperdiet tellus natoque" CreatedAt="Vestibulum laoreet" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Inceptos lacinia sem" IsMember="False" LastReadAt="Velit interdum" Name="Pede risus"/>
+				<Models:Channel CreatedBy="Quis vel" CreatedAt="Pretium quam vestibulum sit" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Posuere malesuada tempor adipiscing penatibus" IsMember="False" LastReadAt="Vestibulum curae nam porttitor" Name="Vitae lobortis parturient class potenti"/>
+				<Models:Channel CreatedBy="Nascetur turpis vestibulum varius" CreatedAt="Vestibulum tortor" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Urna donec adipiscing rhoncus" IsMember="False" LastReadAt="Sed dis adipiscing aenean parturient" Name="Tempus parturient cras"/>
+				<Models:Channel CreatedBy="Parturient duis congue cursus" CreatedAt="Vestibulum etiam adipiscing auctor fusce" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Pharetra sodales mauris viverra" IsMember="False" LastReadAt="Aliquam nunc tincidunt vestibulum" Name="Nullam vestibulum aptent"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Vestibulum adipiscing" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Integer tristique amet placerat" Name="Dictum quisque ante pulvinar ultricies" Presence="AWAY"/>
+				<Models:User Color="Aliquet vestibulum est" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Lorem vivamus" Name="Parturient sagittis aliquam lectus" Presence="ACTIVE"/>
+				<Models:User Color="Leo sociosqu arcu ligula vestibulum" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Hac libero" Name="Senectus morbi blandit" Presence="ACTIVE"/>
+				<Models:User Color="Magnis suscipit diam vulputate curabitur" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Litora adipiscing mus commodo" Name="Luctus venenatis" Presence="AWAY"/>
+				<Models:User Color="Conubia vestibulum per sed" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Phasellus nec mattis parturient" Name="Eget torquent non" Presence="AWAY"/>
+			</Models:Team.Members>
+		</Models:Team>
+		<Models:Team Domain="Torquent eget ultrices elit" EmailDomain="Leo parturient diam" ID="Sit erat" MessageEditWindowMins="Proin mus nullam enim nec" Name="Vestibulum nulla adipiscing suscipit" OverStorageLimit="False">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Mollis eros" CreatedAt="Ultrices augue sed dolor fames" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Vel dapibus" IsMember="False" LastReadAt="Felis ipsum" Name="Dignissim nam"/>
+				<Models:Channel CreatedBy="Adipiscing elementum gravida nibh facilisis" CreatedAt="Magna praesent euismod feugiat accumsan" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Justo vehicula volutpat montes" IsMember="False" LastReadAt="Parturient dis" Name="Vestibulum lacus egestas lorem maecenas"/>
+				<Models:Channel CreatedBy="Fringilla est nisi" CreatedAt="Laoreet eleifend vestibulum nostra" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Bibendum iaculis fermentum vestibulum" IsMember="False" LastReadAt="Morbi habitasse hac neque" Name="Massa dictumst metus lacinia"/>
+				<Models:Channel CreatedBy="Himenaeos netus" CreatedAt="Mus primis" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Ornare hendrerit platea" IsMember="False" LastReadAt="Rutrum sapien nulla faucibus nec" Name="Nisl leo natoque nunc facilisi"/>
+				<Models:Channel CreatedBy="Lobortis malesuada rhoncus" CreatedAt="Habitant inceptos per interdum" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Adipiscing posuere potenti pretium" IsMember="False" LastReadAt="Nascetur sed sodales" Name="Porta imperdiet non"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Orci vel penatibus velit" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Viverra odio purus semper" Name="Pharetra risus sem sit" Presence="ACTIVE"/>
+				<Models:User Color="Vitae tempor placerat dis parturient" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Aliquam nam" Name="Sociis taciti sed tellus" Presence="ACTIVE"/>
+				<Models:User Color="Vestibulum est pede" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Class tempus curae" Name="Tortor turpis vestibulum donec" Presence="AWAY"/>
+				<Models:User Color="Aenean cras sagittis duis fusce" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Adipiscing parturient quam etiam" Name="Pulvinar quis urna varius" Presence="ACTIVE"/>
+				<Models:User Color="Sociosqu porttitor mauris arcu vestibulum" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Nunc hac" Name="Lorem amet senectus ante morbi" Presence="AWAY"/>
+			</Models:Team.Members>
+		</Models:Team>
+		<Models:Team Domain="Viverra neque venenatis" EmailDomain="Ultricies diam nec" ID="Vestibulum erat vestibulum augue eros" MessageEditWindowMins="Non netus nulla vulputate sociosqu" Name="Mus morbi senectus" OverStorageLimit="False">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Congue adipiscing cursus tristique ultricies" CreatedAt="Maecenas auctor per" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Non nibh aptent nisi" IsMember="False" LastReadAt="Nisl venenatis dictum" Name="Vehicula volutpat tincidunt"/>
+				<Models:Channel CreatedBy="Praesent accumsan vivamus" CreatedAt="Parturient nunc fames vestibulum odio" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Dolor integer" IsMember="False" LastReadAt="Vestibulum curabitur phasellus orci" Name="Lectus sed quisque vulputate"/>
+				<Models:Channel CreatedBy="Felis parturient quam dignissim" CreatedAt="Convallis luctus blandit bibendum" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Aliquam libero ligula pede litora" IsMember="False" LastReadAt="Dictumst eleifend facilisi" Name="Adipiscing consequat aliquet"/>
+				<Models:Channel CreatedBy="Faucibus adipiscing habitant" CreatedAt="Dapibus facilisis justo fermentum vestibulum" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Vestibulum commodo conubia ipsum cubilia" IsMember="False" LastReadAt="Inceptos mattis" Name="Magnis elementum"/>
+				<Models:Channel CreatedBy="Mollis egestas euismod feugiat lorem" CreatedAt="Vestibulum vel" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Parturient sem sit" IsMember="False" LastReadAt="Gravida fringilla" Name="Mauris lacus"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Himenaeos iaculis" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Vestibulum magna nam" Name="Habitasse interdum sed dis hendrerit" Presence="ACTIVE"/>
+				<Models:User Color="Vestibulum lobortis" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Montes adipiscing" Name="Massa parturient lacinia" Presence="AWAY"/>
+				<Models:User Color="Penatibus est porttitor" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Nascetur quis imperdiet malesuada pharetra" Name="Laoreet urna placerat natoque nostra" Presence="ACTIVE"/>
+				<Models:User Color="Adipiscing pretium metus" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Cras duis nunc posuere vestibulum" Name="Pulvinar potenti hac" Presence="AWAY"/>
+				<Models:User Color="Vestibulum tincidunt leo tristique" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Amet ante rhoncus parturient ornare" Name="Sagittis arcu vestibulum sodales" Presence="ACTIVE"/>
+			</Models:Team.Members>
+		</Models:Team>
+		<Models:Team Domain="Adipiscing parturient" EmailDomain="Malesuada sed dis est" ID="Adipiscing parturient porta suscipit torquent" MessageEditWindowMins="Morbi nascetur vestibulum vestibulum diam" Name="Vel imperdiet metus nam" OverStorageLimit="False">
+			<Models:Team.Channels>
+				<Models:Channel CreatedBy="Vestibulum rutrum adipiscing" CreatedAt="Eget elit vestibulum purus" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Aliquam platea" IsMember="False" LastReadAt="Sapien sed" Name="Ultrices primis per"/>
+				<Models:Channel CreatedBy="Enim erat volutpat integer vestibulum" CreatedAt="Sem sit taciti" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Semper sociis vehicula" IsMember="False" LastReadAt="Eros vel risus nibh" Name="Parturient curabitur phasellus vestibulum"/>
+				<Models:Channel CreatedBy="Vitae tempus tortor nisl parturient" CreatedAt="Vivamus adipiscing nisi" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Nam tellus velit tempor" IsMember="False" LastReadAt="Class curae nunc donec vestibulum" Name="Consequat quisque"/>
+				<Models:Channel CreatedBy="Sed elementum dis maecenas lorem" CreatedAt="Fusce vestibulum blandit commodo adipiscing" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Aliquam convallis dignissim" IsMember="False" LastReadAt="Conubia est hac" Name="Aliquet turpis etiam"/>
+				<Models:Channel CreatedBy="Nulla praesent vestibulum pede" CreatedAt="Orci varius" IsChannel="True" IsGeneral="True" IsArchived="False" ID="Parturient morbi odio facilisis fermentum" IsMember="False" LastReadAt="Accumsan aenean" Name="Fringilla cubilia vestibulum leo"/>
+			</Models:Team.Channels>
+			<Models:Team.Members>
+				<Models:User Color="Nec augue" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Proin adipiscing habitasse" Name="Mus dapibus bibendum" Presence="ACTIVE"/>
+				<Models:User Color="Fames feugiat mauris parturient non" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Quam quis egestas dolor euismod" Name="Dictumst eleifend urna cras" Presence="AWAY"/>
+				<Models:User Color="Nunc per" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Hendrerit himenaeos felis ipsum" Name="Facilisi duis justo" Presence="ACTIVE"/>
+				<Models:User Color="Nullam gravida" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Faucibus lacus amet vestibulum habitant" Name="Lorem vestibulum magna inceptos ante" Presence="AWAY"/>
+				<Models:User Color="Natoque massa congue arcu sit" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Iaculis sed interdum aptent" Name="Auctor lobortis sem lacinia laoreet" Presence="ACTIVE"/>
+			</Models:Team.Members>
+		</Models:Team>
+	</ViewModels:MainViewModel.Teams>
+	<ViewModels:MainViewModel.Users>
+		<Models:User Color="Venenatis nisi libero" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Hac adipiscing neque" Name="Posuere potenti" Presence="AWAY">
+			<Models:User.Profile>
+				<Models:UserProfile Email="Erat nec" FirstName="Netus penatibus pharetra porttitor eget" LastName="Cursus elit pretium rhoncus leo" Phone="Eros pulvinar nibh ultricies" RealName="Mus tincidunt tristique sodales enim" Skype="Placerat nulla dictum viverra lectus"/>
+			</Models:User.Profile>
+		</Models:User>
+		<Models:User Color="Magnis torquent sed orci" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Aliquam sagittis non" Name="Parturient senectus vulputate nisl nunc" Presence="ACTIVE">
+			<Models:User.Profile>
+				<Models:UserProfile Email="Parturient vestibulum odio" FirstName="Ligula curabitur porta phasellus" LastName="Litora integer vestibulum" Phone="Parturient quisque" RealName="Vestibulum luctus adipiscing purus sociosqu" Skype="Vestibulum per adipiscing consequat suscipit"/>
+			</Models:User.Profile>
+		</Models:User>
+		<Models:User Color="Fringilla quam" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Vestibulum risus vestibulum" Name="Adipiscing sem" Presence="ACTIVE">
+			<Models:User.Profile>
+				<Models:UserProfile Email="Mauris mollis maecenas" FirstName="Convallis parturient vestibulum ultrices" LastName="Dignissim vestibulum vivamus pede elementum" Phone="Aliquet vitae adipiscing class accumsan" RealName="Velit vehicula volutpat facilisis mattis" Skype="Aliquam sit fermentum praesent vel"/>
+			</Models:User.Profile>
+		</Models:User>
+		<Models:User Color="Nostra malesuada ornare faucibus habitant" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Bibendum blandit nam commodo parturient" Name="Conubia dictumst sed curae donec" Presence="ACTIVE">
+			<Models:User.Profile>
+				<Models:UserProfile Email="Urna dapibus facilisi" FirstName="Dis cubilia" LastName="Habitasse vestibulum montes quis" Phone="Imperdiet duis" RealName="Hendrerit eleifend" Skype="Cras himenaeos"/>
+			</Models:User.Profile>
+		</Models:User>
+		<Models:User Color="Diam sociis" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Egestas etiam penatibus" Name="Vestibulum nunc inceptos" Presence="ACTIVE">
+			<Models:User.Profile>
+				<Models:UserProfile Email="Hac arcu" FirstName="Interdum amet" LastName="Adipiscing parturient porttitor platea" Phone="Rutrum lorem sapien semper tristique" RealName="Primis ante est fusce tincidunt" Skype="Leo mus lobortis"/>
+			</Models:User.Profile>
+		</Models:User>
+		<Models:User Color="Eget sociosqu" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Euismod nascetur" Name="Morbi nulla feugiat ultricies" Presence="ACTIVE">
+			<Models:User.Profile>
+				<Models:UserProfile Email="Proin vulputate augue curabitur lacinia" FirstName="Pharetra placerat vestibulum" LastName="Venenatis pulvinar gravida" Phone="Laoreet consequat" RealName="Iaculis sagittis" Skype="Senectus phasellus"/>
+			</Models:User.Profile>
+		</Models:User>
+		<Models:User Color="Parturient per ultrices vestibulum sed" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Suscipit convallis dignissim" Name="Taciti tellus torquent elementum" Presence="AWAY">
+			<Models:User.Profile>
+				<Models:UserProfile Email="Turpis varius aenean non erat" FirstName="Tempor facilisis tempus" LastName="Elit tortor nec fermentum" Phone="Rhoncus adipiscing" RealName="Dolor fames natoque vestibulum enim" Skype="Posuere eros potenti nibh pretium"/>
+			</Models:User.Profile>
+		</Models:User>
+		<Models:User Color="Vestibulum massa nullam pede aptent" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Vestibulum nisi mauris" Name="Nisl adipiscing sem fringilla" Presence="ACTIVE">
+			<Models:User.Profile>
+				<Models:UserProfile Email="Vehicula habitasse odio orci" FirstName="Felis sit ipsum nunc" LastName="Vel justo lacus" Phone="Magna nam aliquam" RealName="Lorem sodales" Skype="Hendrerit viverra parturient"/>
+			</Models:User.Profile>
+		</Models:User>
+		<Models:User Color="Amet sed" HasFiles="True" IsOwner="True" IsDeleted="True" IsAdmin="False" IsUltraRestricted="False" IsRestricted="True" IsPrimaryOwner="False" ID="Auctor vestibulum metus" Name="Congue morbi cursus adipiscing integer" Presence="ACTIVE">
+			<Models:User.Profile>
+				<Models:UserProfile Email="Urna cras" FirstName="Dictum volutpat" LastName="Maecenas quam quis" Phone="Vivamus praesent nunc lectus nulla" RealName="Parturient quisque vestibulum" Skype="Neque netus duis"/>
+			</Models:User.Profile>
+		</Models:User>
+		<Models:User Color="Vestibulum non vitae vestibulum" HasFiles="False" IsOwner="False" IsDeleted="False" IsAdmin="True" IsUltraRestricted="True" IsRestricted="False" IsPrimaryOwner="True" ID="Porta ante libero himenaeos imperdiet" Name="Malesuada penatibus dis" Presence="AWAY">
+			<Models:User.Profile>
+				<Models:UserProfile Email="Aliquam aliquet" FirstName="Vestibulum adipiscing est arcu accumsan" LastName="Purus bibendum ligula" Phone="Parturient velit tincidunt diam nec" RealName="Hac litora dictumst risus" Skype="Porttitor leo mus"/>
+			</Models:User.Profile>
+		</Models:User>
+	</ViewModels:MainViewModel.Users>
+</ViewModels:MainViewModel>

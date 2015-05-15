@@ -16,7 +16,8 @@ namespace Slack.Views
         public NavigationHelper NavigationHelper { get { return this.navigationHelper; } }
         private NavigationHelper navigationHelper;
 
-        public MainViewModel viewModel { get { return (MainViewModel)DataContext; } }
+        public MainViewModel viewModel { get { return _viewModel; } }
+        private static MainViewModel _viewModel = new MainViewModel();
 
         public MainPage()
         {
@@ -87,5 +88,10 @@ namespace Slack.Views
         }
 
         #endregion
+
+        private void MenuToggleButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
+        }
     }
 }
